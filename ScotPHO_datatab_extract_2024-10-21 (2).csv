@@ -1,0 +1,225 @@
+area_code,area_type,area_name,year,period,type_definition,indicator,numerator,measure,upper_confidence_interval,lower_confidence_interval
+S12000005,Council area,Clackmannanshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,59.6,63.3,55.9
+S12000006,Council area,Dumfries & Galloway,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,59.2,61.9,56.6
+S12000008,Council area,East Ayrshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,59.9,62.4,57.4
+S12000010,Council area,East Lothian,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,68.4,71,65.8
+S12000011,Council area,East Renfrewshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,67.2,69.9,64.4
+S12000013,Council area,Na h-Eileanan Siar,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,64,68.2,59.8
+S12000014,Council area,Falkirk,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,59.2,62.1,56.2
+S12000017,Council area,Highland,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,65.8,69.4,62.3
+S12000018,Council area,Inverclyde,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,59.3,62,56.7
+S12000019,Council area,Midlothian,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,61.9,65.3,58.6
+S12000020,Council area,Moray,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,62.7,65.9,59.6
+S12000021,Council area,North Ayrshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,52.1,55.1,49
+S12000023,Council area,Orkney Islands,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,76.4,82.6,70.1
+S12000026,Council area,Scottish Borders,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,66.6,69.2,64
+S12000027,Council area,Shetland Islands,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,71.6,77.7,65.5
+S12000028,Council area,South Ayrshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,63.9,66.5,61.3
+S12000029,Council area,South Lanarkshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,62.7,65.1,60.3
+S12000030,Council area,Stirling,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,65,67.8,62.3
+S12000033,Council area,Aberdeen City,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,61.4,64.4,58.3
+S12000034,Council area,Aberdeenshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,67.3,69.6,65.1
+S12000035,Council area,Argyll & Bute,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,65.3,67.9,62.6
+S12000036,Council area,City of Edinburgh,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,66.3,68.7,63.9
+S12000038,Council area,Renfrewshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,58.4,61.1,55.7
+S12000039,Council area,West Dunbartonshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,56.7,59.7,53.8
+S12000040,Council area,West Lothian,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,59.5,62.8,56.3
+S12000041,Council area,Angus,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,60.7,63.3,58.1
+S12000042,Council area,Dundee City,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,59.5,62.2,56.8
+S12000045,Council area,East Dunbartonshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,65.6,67.9,63.4
+S12000047,Council area,Fife,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,54.5,57.3,51.8
+S12000048,Council area,Perth & Kinross,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,61.1,63.8,58.4
+S12000049,Council area,Glasgow City,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,56,58.3,53.6
+S12000050,Council area,North Lanarkshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, females",NA,56.7,59.3,54
+S12000005,Council area,Clackmannanshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,61.2,64.2,58.3
+S12000006,Council area,Dumfries & Galloway,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,62.3,64.7,59.9
+S12000008,Council area,East Ayrshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,56.8,60.1,53.6
+S12000010,Council area,East Lothian,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,60.7,63.8,57.7
+S12000011,Council area,East Renfrewshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,66.7,69.1,64.3
+S12000013,Council area,Na h-Eileanan Siar,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,67.4,71,63.8
+S12000014,Council area,Falkirk,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,59.3,61.8,56.8
+S12000017,Council area,Highland,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,63.5,66.8,60.2
+S12000018,Council area,Inverclyde,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,57.7,60.2,55.2
+S12000019,Council area,Midlothian,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,59.7,63.6,55.8
+S12000020,Council area,Moray,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,62.4,65.4,59.5
+S12000021,Council area,North Ayrshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,56.5,59.2,53.8
+S12000023,Council area,Orkney Islands,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,71.7,77.2,66.3
+S12000026,Council area,Scottish Borders,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,61.4,64,58.7
+S12000027,Council area,Shetland Islands,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,61.3,71.4,51.2
+S12000028,Council area,South Ayrshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,57.9,61,54.8
+S12000029,Council area,South Lanarkshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,60.2,62.3,58.1
+S12000030,Council area,Stirling,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,65.7,67.9,63.5
+S12000033,Council area,Aberdeen City,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,60.2,62.9,57.5
+S12000034,Council area,Aberdeenshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,67.2,69.1,65.3
+S12000035,Council area,Argyll & Bute,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,63,65.4,60.5
+S12000036,Council area,City of Edinburgh,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,62.9,65.3,60.6
+S12000038,Council area,Renfrewshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,59,61.8,56.2
+S12000039,Council area,West Dunbartonshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,56.4,58.8,54
+S12000040,Council area,West Lothian,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,61.5,64,58.9
+S12000041,Council area,Angus,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,63.1,65.6,60.6
+S12000042,Council area,Dundee City,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,55.9,58.4,53.4
+S12000045,Council area,East Dunbartonshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,66.4,68.5,64.3
+S12000047,Council area,Fife,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,58.6,60.8,56.4
+S12000048,Council area,Perth & Kinross,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,66.3,68.4,64.3
+S12000049,Council area,Glasgow City,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,54.8,57,52.5
+S12000050,Council area,North Lanarkshire,2020,2019-2021 (3 year aggregate),Years,"Healthy life expectancy, males",NA,54.3,56.8,51.8
+S12000005,Council area,Clackmannanshire,2017,2017 calendar year,Percentage,Population income deprived,7305,14.2,14.5,13.9
+S12000006,Council area,Dumfries & Galloway,2017,2017 calendar year,Percentage,Population income deprived,17084,11.5,11.6,11.3
+S12000008,Council area,East Ayrshire,2017,2017 calendar year,Percentage,Population income deprived,18532,15.2,15.4,15
+S12000010,Council area,East Lothian,2017,2017 calendar year,Percentage,Population income deprived,10711,10.2,10.4,10
+S12000011,Council area,East Renfrewshire,2017,2017 calendar year,Percentage,Population income deprived,6424,6.8,6.9,6.6
+S12000013,Council area,Na h-Eileanan Siar,2017,2017 calendar year,Percentage,Population income deprived,2637,9.8,10.2,9.4
+S12000014,Council area,Falkirk,2017,2017 calendar year,Percentage,Population income deprived,18049,11.3,11.4,11.1
+S12000017,Council area,Highland,2017,2017 calendar year,Percentage,Population income deprived,22916,9.7,9.9,9.6
+S12000018,Council area,Inverclyde,2017,2017 calendar year,Percentage,Population income deprived,13945,17.7,18,17.4
+S12000019,Council area,Midlothian,2017,2017 calendar year,Percentage,Population income deprived,9733,10.8,11,10.6
+S12000020,Council area,Moray,2017,2017 calendar year,Percentage,Population income deprived,8117,8.5,8.7,8.3
+S12000021,Council area,North Ayrshire,2017,2017 calendar year,Percentage,Population income deprived,23059,17,17.2,16.8
+S12000023,Council area,Orkney Islands,2017,2017 calendar year,Percentage,Population income deprived,1504,6.8,7.2,6.5
+S12000026,Council area,Scottish Borders,2017,2017 calendar year,Percentage,Population income deprived,10811,9.4,9.6,9.2
+S12000027,Council area,Shetland Islands,2017,2017 calendar year,Percentage,Population income deprived,1287,5.6,5.9,5.3
+S12000028,Council area,South Ayrshire,2017,2017 calendar year,Percentage,Population income deprived,13784,12.2,12.4,12
+S12000029,Council area,South Lanarkshire,2017,2017 calendar year,Percentage,Population income deprived,40695,12.8,12.9,12.7
+S12000030,Council area,Stirling,2017,2017 calendar year,Percentage,Population income deprived,8150,8.7,8.8,8.5
+S12000033,Council area,Aberdeen City,2017,2017 calendar year,Percentage,Population income deprived,19610,8.6,8.7,8.5
+S12000034,Council area,Aberdeenshire,2017,2017 calendar year,Percentage,Population income deprived,16531,6.3,6.4,6.2
+S12000035,Council area,Argyll & Bute,2017,2017 calendar year,Percentage,Population income deprived,8450,9.7,9.9,9.5
+S12000036,Council area,City of Edinburgh,2017,2017 calendar year,Percentage,Population income deprived,44581,8.7,8.8,8.6
+S12000038,Council area,Renfrewshire,2017,2017 calendar year,Percentage,Population income deprived,23087,13.1,13.2,12.9
+S12000039,Council area,West Dunbartonshire,2017,2017 calendar year,Percentage,Population income deprived,15728,17.6,17.8,17.3
+S12000040,Council area,West Lothian,2017,2017 calendar year,Percentage,Population income deprived,20919,11.5,11.7,11.4
+S12000041,Council area,Angus,2017,2017 calendar year,Percentage,Population income deprived,11744,10.1,10.3,9.9
+S12000042,Council area,Dundee City,2017,2017 calendar year,Percentage,Population income deprived,24391,16.4,16.6,16.2
+S12000045,Council area,East Dunbartonshire,2017,2017 calendar year,Percentage,Population income deprived,7735,7.2,7.3,7
+S12000047,Council area,Fife,2017,2017 calendar year,Percentage,Population income deprived,44357,11.9,12.1,11.8
+S12000048,Council area,Perth & Kinross,2017,2017 calendar year,Percentage,Population income deprived,12046,8,8.1,7.8
+S12000049,Council area,Glasgow City,2017,2017 calendar year,Percentage,Population income deprived,119742,19.3,19.4,19.2
+S12000050,Council area,North Lanarkshire,2017,2017 calendar year,Percentage,Population income deprived,50897,15,15.1,14.8
+S12000005,Council area,Clackmannanshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,80,80.4,79.7
+S12000006,Council area,Dumfries & Galloway,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,81.1,81.7,80.4
+S12000008,Council area,East Ayrshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,79.1,79.7,78.6
+S12000010,Council area,East Lothian,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,82.3,82.9,81.8
+S12000011,Council area,East Renfrewshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,83.7,84.9,82.5
+S12000013,Council area,Na h-Eileanan Siar,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,82.6,83.2,81.9
+S12000014,Council area,Falkirk,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,79.9,80.4,79.4
+S12000017,Council area,Highland,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,81.8,82.3,81.4
+S12000018,Council area,Inverclyde,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,78.7,79.5,77.9
+S12000019,Council area,Midlothian,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,80.9,81.5,80.4
+S12000020,Council area,Moray,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,82.1,82.7,81.4
+S12000021,Council area,North Ayrshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,79.5,80,78.9
+S12000023,Council area,Orkney Islands,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,84,84.6,83.4
+S12000026,Council area,Scottish Borders,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,82.3,82.8,81.7
+S12000027,Council area,Shetland Islands,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,83.3,84.4,82.2
+S12000028,Council area,South Ayrshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,80.7,81.2,80.2
+S12000029,Council area,South Lanarkshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,80.1,80.6,79.7
+S12000030,Council area,Stirling,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,81.6,83,80.1
+S12000033,Council area,Aberdeen City,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,80.9,81.3,80.6
+S12000034,Council area,Aberdeenshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,81.8,82.5,81.2
+S12000035,Council area,Argyll & Bute,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,81.6,82.3,81
+S12000036,Council area,City of Edinburgh,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,82.2,82.5,81.9
+S12000038,Council area,Renfrewshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,79.9,80.7,79.1
+S12000039,Council area,West Dunbartonshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,78.4,79.1,77.8
+S12000040,Council area,West Lothian,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,80.7,81.2,80.2
+S12000041,Council area,Angus,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,81.3,81.9,80.7
+S12000042,Council area,Dundee City,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,79,79.6,78.5
+S12000045,Council area,East Dunbartonshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,83.5,84,82.9
+S12000047,Council area,Fife,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,80.9,81.5,80.3
+S12000048,Council area,Perth & Kinross,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,82.5,82.9,82.1
+S12000049,Council area,Glasgow City,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,78.2,78.4,77.9
+S12000050,Council area,North Lanarkshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, females",NA,78.7,79.1,78.3
+S12000005,Council area,Clackmannanshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,76,76.4,75.7
+S12000006,Council area,Dumfries & Galloway,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,77.4,78.1,76.7
+S12000008,Council area,East Ayrshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,74.8,75.4,74.1
+S12000010,Council area,East Lothian,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,78.7,79.3,78.1
+S12000011,Council area,East Renfrewshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,79.4,80.7,78.2
+S12000013,Council area,Na h-Eileanan Siar,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,78.1,78.8,77.3
+S12000014,Council area,Falkirk,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,76.2,76.7,75.6
+S12000017,Council area,Highland,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,77.3,77.8,76.8
+S12000018,Council area,Inverclyde,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,74.6,75.4,73.8
+S12000019,Council area,Midlothian,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,77.1,77.7,76.5
+S12000020,Council area,Moray,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,78.7,79.3,78
+S12000021,Council area,North Ayrshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,74.6,75.2,73.9
+S12000023,Council area,Orkney Islands,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,79.9,80.6,79.3
+S12000026,Council area,Scottish Borders,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,78.6,79.2,77.9
+S12000027,Council area,Shetland Islands,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,79.5,81,77.9
+S12000028,Council area,South Ayrshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,77,77.4,76.5
+S12000029,Council area,South Lanarkshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,75.6,76.1,75
+S12000030,Council area,Stirling,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,77.3,78.6,75.9
+S12000033,Council area,Aberdeen City,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,77,77.3,76.6
+S12000034,Council area,Aberdeenshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,77.7,78.4,76.9
+S12000035,Council area,Argyll & Bute,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,77.7,78.4,77
+S12000036,Council area,City of Edinburgh,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,77.8,78.1,77.5
+S12000038,Council area,Renfrewshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,75.7,76.7,74.7
+S12000039,Council area,West Dunbartonshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,73.2,74,72.4
+S12000040,Council area,West Lothian,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,77.1,77.6,76.6
+S12000041,Council area,Angus,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,78.2,78.9,77.5
+S12000042,Council area,Dundee City,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,74,74.6,73.3
+S12000045,Council area,East Dunbartonshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,80,80.6,79.3
+S12000047,Council area,Fife,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,76.6,77.3,76
+S12000048,Council area,Perth & Kinross,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,78.8,79.2,78.4
+S12000049,Council area,Glasgow City,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,73,73.2,72.7
+S12000050,Council area,North Lanarkshire,2021,2020 to 2022 (3 year aggregate),Years,"Life expectancy, males",NA,74.5,74.9,74.1
+S12000033,Council area,Aberdeen City,2022,2022 survey year,Percentage,Households managing well financially,NA,50,56.5,43.5
+S12000034,Council area,Aberdeenshire,2022,2022 survey year,Percentage,Households managing well financially,NA,56.8,62.4,51.2
+S12000041,Council area,Angus,2022,2022 survey year,Percentage,Households managing well financially,NA,59.8,66.5,53.2
+S12000035,Council area,Argyll & Bute,2022,2022 survey year,Percentage,Households managing well financially,NA,46.9,53.4,40.3
+S12000005,Council area,Clackmannanshire,2022,2022 survey year,Percentage,Households managing well financially,NA,45.5,51.9,39
+S12000006,Council area,Dumfries & Galloway,2022,2022 survey year,Percentage,Households managing well financially,NA,51.6,57.1,46.1
+S12000042,Council area,Dundee City,2022,2022 survey year,Percentage,Households managing well financially,NA,39.9,46.2,33.7
+S12000008,Council area,East Ayrshire,2022,2022 survey year,Percentage,Households managing well financially,NA,43.5,50.1,37
+S12000045,Council area,East Dunbartonshire,2022,2022 survey year,Percentage,Households managing well financially,NA,69.1,75.7,62.4
+S12000010,Council area,East Lothian,2022,2022 survey year,Percentage,Households managing well financially,NA,49.2,55.3,43
+S12000011,Council area,East Renfrewshire,2022,2022 survey year,Percentage,Households managing well financially,NA,60,66.7,53.3
+S12000036,Council area,City of Edinburgh,2022,2022 survey year,Percentage,Households managing well financially,NA,53,56.1,49.9
+S12000013,Council area,Na h-Eileanan Siar,2022,2022 survey year,Percentage,Households managing well financially,NA,67.5,72.5,62.5
+S12000014,Council area,Falkirk,2022,2022 survey year,Percentage,Households managing well financially,NA,45.4,52.2,38.5
+S12000047,Council area,Fife,2022,2022 survey year,Percentage,Households managing well financially,NA,51.1,55.6,46.6
+S12000049,Council area,Glasgow City,2022,2022 survey year,Percentage,Households managing well financially,NA,46.1,49.5,42.7
+S12000017,Council area,Highland,2022,2022 survey year,Percentage,Households managing well financially,NA,53.9,59.6,48.2
+S12000018,Council area,Inverclyde,2022,2022 survey year,Percentage,Households managing well financially,NA,51.8,59.8,43.8
+S12000019,Council area,Midlothian,2022,2022 survey year,Percentage,Households managing well financially,NA,35.5,41.5,29.6
+S12000020,Council area,Moray,2022,2022 survey year,Percentage,Households managing well financially,NA,53.4,60.4,46.3
+S12000021,Council area,North Ayrshire,2022,2022 survey year,Percentage,Households managing well financially,NA,47.1,54.5,39.6
+S12000050,Council area,North Lanarkshire,2022,2022 survey year,Percentage,Households managing well financially,NA,41.8,46.6,37
+S12000023,Council area,Orkney Islands,2022,2022 survey year,Percentage,Households managing well financially,NA,60.2,65.9,54.5
+S12000048,Council area,Perth & Kinross,2022,2022 survey year,Percentage,Households managing well financially,NA,60.7,67.2,54.2
+S12000038,Council area,Renfrewshire,2022,2022 survey year,Percentage,Households managing well financially,NA,52.9,59,46.8
+S12000026,Council area,Scottish Borders,2022,2022 survey year,Percentage,Households managing well financially,NA,56.6,62.3,50.8
+S12000027,Council area,Shetland Islands,2022,2022 survey year,Percentage,Households managing well financially,NA,45.8,51.2,40.4
+S12000028,Council area,South Ayrshire,2022,2022 survey year,Percentage,Households managing well financially,NA,54.9,62.1,47.7
+S12000029,Council area,South Lanarkshire,2022,2022 survey year,Percentage,Households managing well financially,NA,45.3,50.1,40.5
+S12000030,Council area,Stirling,2022,2022 survey year,Percentage,Households managing well financially,NA,54.5,60.9,48.1
+S12000039,Council area,West Dunbartonshire,2022,2022 survey year,Percentage,Households managing well financially,NA,57.4,64.4,50.4
+S12000040,Council area,West Lothian,2022,2022 survey year,Percentage,Households managing well financially,NA,46.2,52.9,39.5
+S12000033,Council area,Aberdeen City,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,48.2,49.4,47
+S12000034,Council area,Aberdeenshire,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,48.6,49.3,47.9
+S12000041,Council area,Angus,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,50.9,53.2,48.7
+S12000035,Council area,Argyll & Bute,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,48.8,50.4,47.1
+S12000005,Council area,Clackmannanshire,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,46.5,48.2,44.8
+S12000006,Council area,Dumfries & Galloway,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,48.3,49.8,46.7
+S12000042,Council area,Dundee City,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,47.1,48.3,45.9
+S12000008,Council area,East Ayrshire,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,45.7,47.6,43.8
+S12000045,Council area,East Dunbartonshire,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,49.7,50.9,48.6
+S12000010,Council area,East Lothian,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,47,49.5,44.5
+S12000011,Council area,East Renfrewshire,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,48.7,50.3,47.1
+S12000036,Council area,City of Edinburgh,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,48.9,50,47.8
+S12000014,Council area,Falkirk,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,47.9,50,45.8
+S12000047,Council area,Fife,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,47.5,48.9,46
+S12000049,Council area,Glasgow City,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,46.8,47.7,45.9
+S12000017,Council area,Highland,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,48.1,49.5,46.7
+S12000018,Council area,Inverclyde,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,46.8,48.1,45.6
+S12000019,Council area,Midlothian,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,48.9,49.9,47.8
+S12000020,Council area,Moray,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,49.5,51.3,47.7
+S12000013,Council area,Na h-Eileanan Siar,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,50.3,51.8,48.9
+S12000021,Council area,North Ayrshire,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,47.8,49.1,46.4
+S12000050,Council area,North Lanarkshire,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,47.1,48.7,45.4
+S12000023,Council area,Orkney Islands,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,49.3,50.7,47.9
+S12000048,Council area,Perth & Kinross,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,49.7,51.4,48
+S12000038,Council area,Renfrewshire,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,47.2,48.7,45.8
+S12000026,Council area,Scottish Borders,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,48.9,50.8,46.9
+S12000027,Council area,Shetland Islands,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,50.1,51.6,48.6
+S12000028,Council area,South Ayrshire,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,47.1,49.6,44.5
+S12000029,Council area,South Lanarkshire,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,47.9,48.9,46.8
+S12000030,Council area,Stirling,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,47.4,48.5,46.4
+S12000039,Council area,West Dunbartonshire,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,45.8,47.4,44.2
+S12000040,Council area,West Lothian,2020,4-year aggregate (2018-2022),Mean,Mental wellbeing score (higher is better),NA,47.3,48.7,45.9
