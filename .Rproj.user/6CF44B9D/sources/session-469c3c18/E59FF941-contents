@@ -39,19 +39,38 @@ library(ggplot2)
 
 #Import the data and create tidy datasets as each variable is listed in a single column
 
-```{r}
+```{r - read in and tidy healthy life expectancy data}
+Data <- read_csv("ScotPHO_data.csv")
+glimpse(Data) 
+
+```
+##Dataset 1 - Healthy life expectancy
+```{r - tidy healthy life expectancy data}
+hle <- Data %>% 
+  filter(grepl('Healthy', indicator)) %>% 
+  select(area_code,area_name,indicator,measure,upper_confidence_interval,lower_confidence_interval) %>% 
+  rename(sex = indicator,
+        hle = measure) %>% 
+  mutate(sex = gsub('Healthy life expectancy, females','0', sex,)) %>% 
+  mutate(sex = gsub('Healthy life expectancy, males','1', sex,))    
+    
+head(hle)
+glimpse(hle)
+```
+
+##Dataset 2 - Population income deprived
+```{r - tidy healthy life expectancy data}
 Data <- read_csv("ScotPHO_data.csv")
 glimpse(Data) 
 
 hle <- Data %>% 
   filter(grepl('Healthy', indicator)) %>% 
-  select(area_code,area_name,indicator,measure,upper_confidence_interval,lower_confidence_interval)
+  select(area_code,area_name,indicator,measure,upper_confidence_interval,lower_confidence_interval) %>% 
   rename(sex = indicator,
         hle = measure) %>% 
-  mutate(sex = gsub('Healthy life expectancy, females','0')) %>% 
+  mutate(sex = gsub('Healthy life expectancy, females','0', sex,)) %>% 
+  mutate(sex = gsub('Healthy life expectancy, males','1', sex,))    
     
-
 head(hle)
 
 ```
-
