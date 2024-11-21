@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Title: Understanding health and wealth in Scottish Council areas
 
-## Background
+### Background
 # Over the last 100 years, life expectancy in the UK has increased significantly with advances in living standards and advancing healthcare. However, over the last 10 years this has stalled and even declined in some instances alongside significant inequalities arising across the country. In Scotland, disparities in life expectancy are evident where the most deprived exhibit approximately 10 years difference in life expectancy compared to their more affluent neighbourhoods. In recent years, the cost of living crisis has also impacted on peoples health and wellbeing but the extent to which this has impacts on different income levels is unknown and thereafter how this links to health. The extent to which people feel able to manage their own money may act as a useful proxy measure for financial stress within a cost of living crisis regardless of income levels and be a useful indicator for health status.
 
 ## Research questions
@@ -19,32 +19,32 @@ knitr::opts_chunk$set(echo = TRUE)
 # 2. How is population income associated with the perception of being able to manage money well?
 # 3. How does the ability to manage money well impact on health and mental health in Scotland?
 
-## Datasets used
-# In this work, we used the datasets in Table 1 below. These data were downloaded from https://scotland.shinyapps.io/ScotPHO_profiles_tool/ in a single file and then tidy datasets created for analysis. 
-
-```{r datasets table}
-
-```
-
-## Data analysis
+### Packages and libraries
 # For this work, the following packages and libraries were used:
 
 ```{r}
 install.packages(tidyverse)
 
 library(readr)
+library(tidyr)
 library(dplyr)
 library(ggplot2)
 ```
 
-#Import the data and create tidy datasets as each variable is listed in a single column
+
+###Data acquisition
+# In this work, we used the datasets in Table 1 below. These data were downloaded from https://scotland.shinyapps.io/ScotPHO_profiles_tool/ in a single file and then tidy datasets created for analysis. 
+
+#Import the data and create tidy datasets as each variable is listed in a single column with the name of the indicator in the column 'indicator'
 
 ```{r - read in and tidy healthy life expectancy data}
 Data <- read_csv("ScotPHO_data.csv")
 glimpse(Data) 
 
 ```
-##Dataset 1 - Healthy life expectancy
+### Data cleaning and preparation
+##Dataset 1 - Healthy life expectancy.
+# Create tidy data with helathy life expectancy for males and females
 ```{r - tidy healthy life expectancy data}
 hle <- Data %>% 
   filter(grepl('Healthy', indicator)) %>% 
@@ -57,20 +57,64 @@ hle <- Data %>%
 head(hle)
 glimpse(hle)
 ```
+# We now need to combine males and females to create a single mean healthy life expectancy value for each Council area
 
-##Dataset 2 - Population income deprived
-```{r - tidy healthy life expectancy data}
-Data <- read_csv("ScotPHO_data.csv")
-glimpse(Data) 
+```{r}
+mean_hle <- hle %>% 
+  group_by(area_code) %>% 
+  mutate(mean_hle = mean(hle)) 
+  select
+```
 
-hle <- Data %>% 
-  filter(grepl('Healthy', indicator)) %>% 
-  select(area_code,area_name,indicator,measure,upper_confidence_interval,lower_confidence_interval) %>% 
-  rename(sex = indicator,
-        hle = measure) %>% 
-  mutate(sex = gsub('Healthy life expectancy, females','0', sex,)) %>% 
-  mutate(sex = gsub('Healthy life expectancy, males','1', sex,))    
-    
-head(hle)
+# We have duplicate mean healthy life expectancy values, so now we need to slice the rows containing sex = 0 and remove the column sex
+```{r}
+mean_hle1 <- mean_hle %>% 
+  filter(sex != 1) %>% 
+  select(area_code, area_name, mean_hle)
+
+head(mean_hle1)
 
 ```
+##Dataset 2 - Population income deprived
+```{r - tidy population income deprived data}
+
+pid <- Data  %>%  
+  drop_na()
+
+pid %>% 
+  select(area_code,area_name,numerator,measure,upper_confidence_interval,lower_confidence_interval) %>% 
+  rename(population = numerator,
+        pid = measure) 
+    
+```
+##Dataset 3 - Mental health income deprived
+```{r - tidy menalth health income deprived data}
+mental <- Data %>% 
+  filter(grepl('Mental', indicator)) %>% 
+  select(area_code,area_name,measure,upper_confidence_interval,lower_confidence_interval) %>% 
+  rename(mental_score = measure)
+         
+```
+
+##Dataset 4 - Households managing financially well
+```{r - tidy healthy life expectancy data}
+finance <- Data %>% 
+  filter(grepl('Households', indicator)) %>% 
+  select(area_code,area_name,measure,upper_confidence_interval,lower_confidence_interval) %>% 
+  rename(finance = measure)
+
+```
+
+### Data analysis and visualisation
+
+# 1. What is the variation in health and mental health across different Scottish council areas?
+
+```{r}
+
+```
+
+
+### Discussion
+
+##Limitations
+#different years of data

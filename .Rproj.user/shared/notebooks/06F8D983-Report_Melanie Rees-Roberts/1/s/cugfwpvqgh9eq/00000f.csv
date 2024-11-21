@@ -11,6 +11,8 @@
 "
 "0","library(readr)"
 "2","Warning: package ‘readr’ was built under R version 4.3.3"
+"0","library(tidyr)"
+"2","Warning: package ‘tidyr’ was built under R version 4.3.3"
 "0","library(dplyr)"
 "2","Warning: package ‘dplyr’ was built under R version 4.3.3"
 "2","

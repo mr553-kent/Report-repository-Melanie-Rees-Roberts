@@ -1,0 +1,6 @@
+"0","mental <- Data %>% "
+"0","  filter(grepl('Mental', indicator)) %>% "
+"0","  select(area_code,area_name,measure,upper_confidence_interval,lower_confidence_interval) %>% "
+"0","  rename(mental_score = measure)"
+"0","         "
+"0",""
