@@ -1,0 +1,5 @@
+"0","data_final <- left_join(mean_hle1, pid, by=c('area_code'='area_Code')) 
+"
+"2","Error in left_join(mean_hle1, pid, by = c(area_code = ""area_Code"")) : 
+  could not find function ""left_join""
+"

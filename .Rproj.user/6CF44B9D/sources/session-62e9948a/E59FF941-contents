@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 install.packages(tidyverse)
-
+library(tidyverse)
 library(readr)
 library(tidyr)
 library(dplyr)
@@ -81,36 +81,66 @@ head(mean_hle1)
 pid <- Data  %>%  
   drop_na()
 
-pid %>% 
-  select(area_code,area_name,numerator,measure,upper_confidence_interval,lower_confidence_interval) %>% 
+pid <- pid %>% 
+  select(area_code,numerator,measure) %>% 
   rename(population = numerator,
         pid = measure) 
     
 ```
-##Dataset 3 - Mental health income deprived
-```{r - tidy menalth health income deprived data}
+##Dataset 3 - Mental health score deprived
+```{r - tidy mental health score  data}
 mental <- Data %>% 
   filter(grepl('Mental', indicator)) %>% 
-  select(area_code,area_name,measure,upper_confidence_interval,lower_confidence_interval) %>% 
+  select(area_code,measure) %>% 
   rename(mental_score = measure)
          
 ```
 
 ##Dataset 4 - Households managing financially well
-```{r - tidy healthy life expectancy data}
+```{r - tidy households managing financially well data}
 finance <- Data %>% 
   filter(grepl('Households', indicator)) %>% 
-  select(area_code,area_name,measure,upper_confidence_interval,lower_confidence_interval) %>% 
+  select(area_code,measure) %>% 
   rename(finance = measure)
 
 ```
 
+##Combine data into a single table named data_final.
+
+```{r}
+data_final <- inner_join(mean_hle1, pid, by = 'area_code')
+
+data_final <- inner_join(data_final, mental, by = 'area_code') 
+
+data_final <- inner_join(data_final, finance, by = 'area_code') 
+  
+```
+
 ### Data analysis and visualisation
 
-# 1. What is the variation in health and mental health across different Scottish council areas?
+## 1. What is the variation in health and mental health across different Scottish council areas?
 
 ```{r}
 
+  ggplot() +
+  geom_point(aes(x = age, y = fev, colour = sex)) +
+  geom_smooth(aes(x = age, y = fev, colour = sex))
+```
+
+## 2. How is population income associated with the perception of being able to manage money well?
+```{r}
+  ggplot() +
+  geom_point(aes(x = age, y = fev, colour = sex)) +
+  geom_smooth(aes(x = age, y = fev, colour = sex))
+```
+
+
+## 3. How does the ability to manage money well impact on health and mental health in Scotland?
+```{r}
+  
+ggplot() +
+  geom_point(aes(x = age, y = fev, colour = sex)) +
+  geom_smooth(aes(x = age, y = fev, colour = sex))
 ```
 
 

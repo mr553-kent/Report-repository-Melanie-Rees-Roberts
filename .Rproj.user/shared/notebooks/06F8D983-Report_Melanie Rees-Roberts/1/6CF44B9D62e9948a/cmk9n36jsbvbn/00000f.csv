@@ -1,0 +1,16 @@
+"0","mean_hle <- hle %>% "
+"0","  group_by(area_code) %>% "
+"0","  mutate(mean_hle = mean(hle)) "
+"0","  select"
+"1","function (.data, ...) 
+"
+"1","{
+"
+"1","    UseMethod(""select"")
+"
+"1","}
+"
+"1","<bytecode: 0x0000023210f4cad0>
+"
+"1","<environment: namespace:dplyr>
+"

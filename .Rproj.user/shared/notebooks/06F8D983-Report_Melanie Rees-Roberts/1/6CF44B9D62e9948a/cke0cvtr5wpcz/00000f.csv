@@ -1,0 +1,5 @@
+"0","mental <- Data %>% "
+"0","  filter(grepl('Mental', indicator)) %>% "
+"0","  select(area_code,measure) %>% "
+"0","  rename(mental_score = measure)"
+"0","         "

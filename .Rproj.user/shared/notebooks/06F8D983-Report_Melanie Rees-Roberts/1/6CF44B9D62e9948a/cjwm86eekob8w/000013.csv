@@ -1,0 +1,5 @@
+"0","mean_hle1 <- mean_hle %>% "
+"0","  filter(sex != 1) %>% "
+"0","  select(area_code, area_name, mean_hle)"
+"0",""
+"0","head(mean_hle1)"

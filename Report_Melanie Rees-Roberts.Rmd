@@ -87,8 +87,8 @@ pid %>%
         pid = measure) 
     
 ```
-##Dataset 3 - Mental health income deprived
-```{r - tidy menalth health income deprived data}
+##Dataset 3 - Mental health score deprived
+```{r - tidy mental health score  data}
 mental <- Data %>% 
   filter(grepl('Mental', indicator)) %>% 
   select(area_code,area_name,measure,upper_confidence_interval,lower_confidence_interval) %>% 
@@ -97,7 +97,7 @@ mental <- Data %>%
 ```
 
 ##Dataset 4 - Households managing financially well
-```{r - tidy healthy life expectancy data}
+```{r - tidy households managing financially well data}
 finance <- Data %>% 
   filter(grepl('Households', indicator)) %>% 
   select(area_code,area_name,measure,upper_confidence_interval,lower_confidence_interval) %>% 
@@ -105,12 +105,45 @@ finance <- Data %>%
 
 ```
 
+##Combine data into a single table named data_final.
+
+```{r}
+data_final <- left_join(mean_hle1, pid, by=c('area_code'='area_Code')) 
+
+data_final %>% 
+  left_join(HB_admissions, health_board_codes, by=c('area_code'='IntZone')) 
+
+%>% 
+  left_join(HB_admissions, health_board_codes, by=c('area_code'='IntZone'))
+
+head(data_final)
+```
+
 ### Data analysis and visualisation
 
-# 1. What is the variation in health and mental health across different Scottish council areas?
+## 1. What is the variation in health and mental health across different Scottish council areas?
 
 ```{r}
 
+  ggplot() +
+  geom_point(aes(x = age, y = fev, colour = sex)) +
+  geom_smooth(aes(x = age, y = fev, colour = sex))
+```
+
+## 2. How is population income associated with the perception of being able to manage money well?
+```{r}
+  ggplot() +
+  geom_point(aes(x = age, y = fev, colour = sex)) +
+  geom_smooth(aes(x = age, y = fev, colour = sex))
+```
+
+
+## 3. How does the ability to manage money well impact on health and mental health in Scotland?
+```{r}
+  
+ggplot() +
+  geom_point(aes(x = age, y = fev, colour = sex)) +
+  geom_smooth(aes(x = age, y = fev, colour = sex))
 ```
 
 
