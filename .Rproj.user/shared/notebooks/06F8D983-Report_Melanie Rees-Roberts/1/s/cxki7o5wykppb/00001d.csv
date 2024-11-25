@@ -1,8 +1,0 @@
-"0",""
-"0","pid <- Data  %>%  "
-"0","  drop_na()"
-"0",""
-"0","pid %>% "
-"0","  select(area_code,area_name,numerator,measure,upper_confidence_interval,lower_confidence_interval) %>% "
-"0","  rename(population = numerator,"
-"0","        pid = measure) "

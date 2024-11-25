@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 install.packages(tidyverse)
-
+library(tidyverse)
 library(readr)
 library(tidyr)
 library(dplyr)
@@ -81,8 +81,8 @@ head(mean_hle1)
 pid <- Data  %>%  
   drop_na()
 
-pid %>% 
-  select(area_code,area_name,numerator,measure,upper_confidence_interval,lower_confidence_interval) %>% 
+pid <- pid %>% 
+  select(area_code,numerator,measure) %>% 
   rename(population = numerator,
         pid = measure) 
     
@@ -91,7 +91,7 @@ pid %>%
 ```{r - tidy mental health score  data}
 mental <- Data %>% 
   filter(grepl('Mental', indicator)) %>% 
-  select(area_code,area_name,measure,upper_confidence_interval,lower_confidence_interval) %>% 
+  select(area_code,measure) %>% 
   rename(mental_score = measure)
          
 ```
@@ -100,7 +100,7 @@ mental <- Data %>%
 ```{r - tidy households managing financially well data}
 finance <- Data %>% 
   filter(grepl('Households', indicator)) %>% 
-  select(area_code,area_name,measure,upper_confidence_interval,lower_confidence_interval) %>% 
+  select(area_code,measure) %>% 
   rename(finance = measure)
 
 ```
@@ -108,15 +108,12 @@ finance <- Data %>%
 ##Combine data into a single table named data_final.
 
 ```{r}
-data_final <- left_join(mean_hle1, pid, by=c('area_code'='area_Code')) 
+data_final <- inner_join(mean_hle1, pid, by = 'area_code')
 
-data_final %>% 
-  left_join(HB_admissions, health_board_codes, by=c('area_code'='IntZone')) 
+data_final <- inner_join(data_final, mental, by = 'area_code') 
 
-%>% 
-  left_join(HB_admissions, health_board_codes, by=c('area_code'='IntZone'))
-
-head(data_final)
+data_final <- inner_join(data_final, finance, by = 'area_code') 
+  
 ```
 
 ### Data analysis and visualisation
@@ -124,26 +121,37 @@ head(data_final)
 ## 1. What is the variation in health and mental health across different Scottish council areas?
 
 ```{r}
-
+data_final %>% 
   ggplot() +
-  geom_point(aes(x = age, y = fev, colour = sex)) +
-  geom_smooth(aes(x = age, y = fev, colour = sex))
+  geom_col(aes(x = reorder(area_name, pid), y = mean_hle)) +
+  geom_point(aes(x=area_name, y = mental_score)) +
+  coord_cartesian(ylim = c(40, NA)) +
+  ggtitle("          Health and mental health across Scottish Councils") +
+  labs(x="Area name by increasing % of population income deprived", 
+       y = "Mean Healthy life expectancy in years (bars)
+            Mental Health Score  (dots)") + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+ 
+  
 ```
 
 ## 2. How is population income associated with the perception of being able to manage money well?
 ```{r}
-  ggplot() +
-  geom_point(aes(x = age, y = fev, colour = sex)) +
-  geom_smooth(aes(x = age, y = fev, colour = sex))
+  data_final %>% 
+  ggplot(aes(x = pid, y = finance)) +
+  geom_point() +
+  geom_smooth(method = lm) +
+  ggtitle("Correlation of percentage population income deprived with ability 
+          of population to manage their own money for Scottish Council areas") +
+  labs(x="% of population that are income deprived", 
+       y = "Ability to manage their own money effectively (score)") + 
+  coord_cartesian(ylim = c(0, NA)) 
 ```
 
 
 ## 3. How does the ability to manage money well impact on health and mental health in Scotland?
 ```{r}
-  
-ggplot() +
-  geom_point(aes(x = age, y = fev, colour = sex)) +
-  geom_smooth(aes(x = age, y = fev, colour = sex))
+
 ```
 
 
