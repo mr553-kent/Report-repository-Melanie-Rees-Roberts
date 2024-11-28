@@ -1,0 +1,5 @@
+"0","data_final %>% "
+"0","ggplot(aes(y=mental_score,x=pid,colour=finance)) +"
+"0","  geom_point() +"
+"0","  stat_smooth(method=""lm"", se=FALSE)"
+"0",""

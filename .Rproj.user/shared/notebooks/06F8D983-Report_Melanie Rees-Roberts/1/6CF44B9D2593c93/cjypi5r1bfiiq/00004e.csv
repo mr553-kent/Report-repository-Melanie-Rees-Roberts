@@ -1,0 +1,5 @@
+"0",""
+"0","# look at collinearity"
+"0","vif_Values <- vif(q3_Model)"
+"0","vif_Values %>% "
+"0","barplot(main = ""VIF Values"", horiz = TRUE, col = ""steelblue"") #create horizontal bar chart to display each VIF value"

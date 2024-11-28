@@ -1,0 +1,28 @@
+{
+    "id": "508EA940",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1732800653968.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "id": "82bfb546675446a481b9b196c1bb83e2",
+        "name": "q3_Model_mental",
+        "title": "q3_Model_mental",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 13229753408749682,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1732800653968,
+    "read_only": false,
+    "read_only_alternatives": []
+}

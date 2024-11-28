@@ -2,7 +2,9 @@
 title: "Report_Melanie Rees-Roberts"
 author: "Melanie Rees-Roberts"
 date: "2024-11-14"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -22,15 +24,22 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Packages and libraries
 # For this work, the following packages and libraries were used:
 
-```{r}
-install.packages(tidyverse)
+#install.packages("tidyverse")
+#library(tidyverse)
+#library(readr)
+#library(tidyr)
+#library(dplyr)
+#library(ggplot2)
+
+```{r - packages and libraries, include=FALSE}
+
 library(tidyverse)
 library(readr)
 library(tidyr)
 library(dplyr)
 library(ggplot2)
-```
 
+```
 
 ###Data acquisition
 # In this work, we used the datasets in Table 1 below. These data were downloaded from https://scotland.shinyapps.io/ScotPHO_profiles_tool/ in a single file and then tidy datasets created for analysis. 
@@ -38,6 +47,7 @@ library(ggplot2)
 #Import the data and create tidy datasets as each variable is listed in a single column with the name of the indicator in the column 'indicator'
 
 ```{r - read in and tidy healthy life expectancy data}
+
 Data <- read_csv("ScotPHO_data.csv")
 glimpse(Data) 
 
@@ -136,7 +146,7 @@ data_final %>%
 ```
 
 ## 2. How is population income associated with the perception of being able to manage money well?
-```{r}
+```{r code for Research Q 2}
   data_final %>% 
   ggplot(aes(x = pid, y = finance)) +
   geom_point() +
@@ -146,14 +156,107 @@ data_final %>%
   labs(x="% of population that are income deprived", 
        y = "Ability to manage their own money effectively (score)") + 
   coord_cartesian(ylim = c(0, NA)) 
+
+ data_final %>% 
+  ggplot(aes(x = mean_hle, y = mental_score)) +
+  geom_point() +
+  geom_smooth(method = lm) +
+  ggtitle("Correlation of healthy life expectancy with mental health score") +
+  labs(x="Mean Healthy life expectancy", 
+       y = "Mental Health Score") + 
+  coord_cartesian(ylim = c(40, NA)) 
+
 ```
 
 
 ## 3. How does the ability to manage money well impact on health and mental health in Scotland?
-```{r}
 
+#We need to install additional packages and librares
+
+
+```{r}
+library(stats)
+
+install.packages("ggcorrplot")
+library(ggcorrplot)
+
+install.packages("car")
+library(car)
 ```
 
+
+#First, let's build our model and check for the normality of the residuals to understand the model fit and explore any multi-collinearity.
+```{r}
+
+q3_Model = lm(formula = mean_hle ~ pid + finance, data = data_final)
+summary(q3_Model)
+
+# Get the model residuals
+q3_Model_residuals = q3_Model$residuals
+
+# Plot the result
+hist(q3_Model_residuals)
+
+# Plot the residuals
+qqnorm(q3_Model_residuals)
+
+# Plot the Q-Q line
+qqline(q3_Model_residuals)
+
+# look at collinearity
+vif_Values <- vif(q3_Model)
+vif_Values %>% 
+barplot(main = "VIF Values", horiz = TRUE, col = "steelblue") #create horizontal bar chart to display each VIF value
+
+
+```
+# The equation for our model can be found in the summary. For this regression it is:
+# y = 66.5 - 0.89x + 0.11z, where y is our mean_hle, x is our population income deprived and z is our ability to manage own finance variable.
+# Visualise our model using a plot
+
+
+```{r}
+data_final %>% 
+ggplot(aes(y=mean_hle,x=pid,colour=finance)) +
+  geom_point() +
+  stat_smooth(method="lm", se=FALSE)
+
+```
+# Now let's model mental health score in the same way
+
+```{r}
+q3_Model_mental = lm(formula = mental_score ~ pid + finance, data = data_final)
+summary(q3_Model_mental)
+
+# Get the model residuals
+q3_Model_mental_residuals = q3_Model$residuals
+
+# Plot the result
+hist(q3_Model_mental_residuals)
+
+# Plot the residuals
+qqnorm(q3_Model_mental_residuals)
+
+# Plot the Q-Q line
+qqline(q3_Model_mental_residuals)
+
+# look at collinearity
+vif_Values2 <- vif(q3_Model_mental)
+vif_Values2 %>% 
+barplot(main = "VIF Values", horiz = TRUE, col = "steelblue") #create horizontal bar chart to display each VIF value
+```
+# The equation for this model is:
+# mental_score = 66.5
+# Visualise our model using a plot
+
+
+```{r}
+data_final %>% 
+ggplot(aes(y=mental_score,x=pid,colour=finance)) +
+  geom_point() +
+  stat_smooth(method="lm", se=FALSE)
+
+```
 
 ### Discussion
 

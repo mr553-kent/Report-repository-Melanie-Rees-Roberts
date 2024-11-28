@@ -2,7 +2,9 @@
 title: "Report_Melanie Rees-Roberts"
 author: "Melanie Rees-Roberts"
 date: "2024-11-14"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -22,15 +24,17 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Packages and libraries
 # For this work, the following packages and libraries were used:
 
-```{r}
-install.packages(tidyverse)
+#install.packages("tidyverse")
+
+```{r - packages and libraries}
+
 library(tidyverse)
 library(readr)
 library(tidyr)
 library(dplyr)
 library(ggplot2)
-```
 
+```
 
 ###Data acquisition
 # In this work, we used the datasets in Table 1 below. These data were downloaded from https://scotland.shinyapps.io/ScotPHO_profiles_tool/ in a single file and then tidy datasets created for analysis. 
@@ -38,6 +42,7 @@ library(ggplot2)
 #Import the data and create tidy datasets as each variable is listed in a single column with the name of the indicator in the column 'indicator'
 
 ```{r - read in and tidy healthy life expectancy data}
+
 Data <- read_csv("ScotPHO_data.csv")
 glimpse(Data) 
 
@@ -136,7 +141,7 @@ data_final %>%
 ```
 
 ## 2. How is population income associated with the perception of being able to manage money well?
-```{r}
+```{r code for Research Q 2}
   data_final %>% 
   ggplot(aes(x = pid, y = finance)) +
   geom_point() +

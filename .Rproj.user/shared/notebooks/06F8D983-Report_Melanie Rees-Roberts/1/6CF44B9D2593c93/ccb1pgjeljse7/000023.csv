@@ -1,0 +1,3 @@
+"0",""
+"0","# Plot the Q-Q line"
+"0","qqline(q3_Model_mental_residuals)"
