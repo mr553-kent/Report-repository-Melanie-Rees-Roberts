@@ -1,0 +1,3 @@
+"0",""
+"0","q3_Model_residuals = q3_Model$residuals # Get the model residuals"
+"0","hist(q3_Model_residuals) # Plot the result"

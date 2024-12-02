@@ -1,0 +1,8 @@
+"0","data_final %>% "
+"0","  ggplot(aes(x = mean_hle, y = mental_score)) +"
+"0","  geom_point() +"
+"0","  geom_smooth(method = lm) +"
+"0","  ggtitle(""Correlation of healthy life expectancy with mental health score"") +"
+"0","  labs(x=""Mean Healthy life expectancy"", "
+"0","       y = ""Mental Health Score"") + "
+"0","  coord_cartesian(ylim = c(40, NA)) "

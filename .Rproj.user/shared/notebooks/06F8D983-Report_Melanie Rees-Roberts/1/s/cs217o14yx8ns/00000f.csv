@@ -1,0 +1,7 @@
+"0",""
+"0","data_final <- inner_join(mean_hle1, pid, by = 'area_code')"
+"0",""
+"0","data_final <- inner_join(data_final, mental, by = 'area_code') "
+"0",""
+"0","data_final <- inner_join(data_final, finance, by = 'area_code') "
+"0","  "
