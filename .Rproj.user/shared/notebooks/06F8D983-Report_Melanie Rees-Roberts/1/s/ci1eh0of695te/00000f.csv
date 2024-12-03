@@ -1,4 +1,0 @@
-"0","mean_hle <- hle %>% "
-"0","  group_by(area_code) %>% "
-"0","  mutate(mean_hle = mean(hle)) "
-"0",""

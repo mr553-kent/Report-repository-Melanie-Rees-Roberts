@@ -64,6 +64,8 @@ The following libraries were used:
 
 -   library(stats)
 
+-   library(car)
+
 ```{r - packages, eval=FALSE, include=FALSE}
 install.packages("tidyverse")
 install.packages("car") 
@@ -77,6 +79,7 @@ library(tidyr)
 library(dplyr)
 library(ggplot2)
 library(stats)
+library(car)
 
 ```
 
@@ -99,9 +102,9 @@ the Scottish Public Health Observatory website.
     asked "Taking everything together, which of these phrases on this
     card best describes how you and your household are managing
     financially these days?" and the six responses ranged from "manage
-    very well" to "are in deep financial trouble". The variable was hk2.
-    The indicator is the percentage who responded either "manage very
-    well" or "manage quite well".Last updated September 2024.
+    very well" to "are in deep financial trouble". The indicator is the
+    percentage who responded either "manage very well" or "manage quite
+    well". Last updated September 2024.
 -   **Mental wellbeing score** - Mean score on the WEMWBS scale (adults,
     16+ years). WEMWBS stands for Warwick-Edinburgh Mental Wellbeing
     Scale. The questionnaire consists of 14 positively worded items
@@ -131,7 +134,7 @@ glimpse(Data)
 
 Data was manipulated to create tidy datasets as each variable was listed
 in a single column with the name of the indicator in the column
-'indicator'.For each of the four indicators used, tidy datasets were
+'indicator'. For each of the four indicators used, tidy datasets were
 created.
 
 ### Dataset 1 - Healthy life expectancy.
@@ -153,8 +156,7 @@ head(hle)
 
 ```
 
-Then we created a single mean healthy life expectancy value for each
-Council area.
+The data was mutated to create a single mean healthy life expectancy for males and females combined for each Council area.
 
 ```{r - create a single mean hle for both males and females combined}
 mean_hle <- hle %>% 
@@ -163,7 +165,7 @@ mean_hle <- hle %>%
 
 ```
 
-This created duplicate mean healthy life expectancy values, so the data
+This led to duplicate mean healthy life expectancy values, so the data
 was sliced to remove the rows containing sex = 0 and remove the column
 sex.
 
@@ -223,7 +225,8 @@ data_final <- inner_join(mean_hle1, pid, by = 'area_code')
 data_final <- inner_join(data_final, mental, by = 'area_code') 
 
 data_final <- inner_join(data_final, finance, by = 'area_code') 
-  
+
+head(data_final)
 ```
 
 # Data analysis and visualisation
@@ -235,7 +238,7 @@ councils we plotted each council area in a column plot with councils
 ordered on the x axis in order of increasing % of the population that
 were income deprived (i.e. income deprivation increases with the x
 axis). On top of this, mental wellbeing scores were plotted using points
-howing the mental health scores of these council areas.
+showing the mental health scores of these council areas.
 
 *Figure 1: The variation in health and mental health score across
 different Scottish council areas.*
@@ -247,7 +250,7 @@ data_final %>%
            width=0.75, position=position_dodge(0.5)) +
   geom_point(aes(x=area_name, y = mental_score, colour = "red")) +
   coord_cartesian(ylim = c(40, NA)) +
-  ggtitle("          Health and mental health across Scottish Councils") +
+  ggtitle("          Health and mental wellbeing across Scottish Councils") +
   labs(x="Area name by increasing % of population income deprived", 
        y = "Mean Healthy life expectancy in years (bars)
             Mental Wellbeing Score  (dots)") + 
@@ -259,7 +262,7 @@ From these data you can see that there is a general decrease in mean
 healthy life expectancy with increasing % of the population that is
 income deprived. The Orkney Islands stand out as being an outlier to
 this trend with a life expectancy of approximately 10 years higher than
-its comparable council areas. Mental wellbeing score however, does not
+its comparable council areas. Mental wellbeing score, however, does not
 exhibit a similar correlation with income deprivation and is generally
 consistent across council areas with some variation in individual cases
 e.g. Angus having the highest mental wellbeing score and East Lothian
@@ -267,13 +270,13 @@ one of the lowest despite similar income deprivation levels.
 
 ## 2. How is population income associated with the perception of being able to manage money well?
 
-Next we wanted to see if two different variables were correlated. These
-were the % of the population that is deprived compared with the ability
-of the population to manage their money well. To do this, the variables
-were plotted as a scatter plot and a best fit line added.
+To understand if income deprivation correlates with the ability to
+manage money, we compared % of the population that is deprived with the
+ability of the population to manage their money well variable as a
+scatter plot with best fit line added.
 
 *Figure 2: Correlating the % of the population that are income deprived
-with the ability to manage money well across Scottish council areas*
+with the ability to manage money well in Scottish council areas*
 
 ```{r code for Research Q 2, message=FALSE, warning=FALSE}
   data_final %>% 
@@ -307,9 +310,9 @@ data_final %>%
 
 ### Predicting mean healthly life expectancy using the % of the population income deprived and ability to manage finances well
 
-First, let's build a multiple linear regression model of mean healthy
-life expectancy predicted by population income deprivation and the
-ability to manage money well.
+First, the data were used to create a multiple linear regression model
+of mean healthy life expectancy predicted by population income
+deprivation and the ability to manage money well.
 
 ```{r - linear models}
 
@@ -319,12 +322,12 @@ summary(q3_Model)
 ```
 
 It is important to check for the normality of the residuals to
-understand the model fit and explore any multi-collinearity.In this
+understand the model fit and explore any multi-collinearity. In this
 model, our residuals were normal in distribution and the collinearity
 for variables pid and finance were below 2.5 indicating no considerable
 collinearity present in the model between independent variables.
 
-```{r - check the model parameters, eval=FALSE}
+```{r - check the model parameters,eval=FALSE}
 
 q3_Model_residuals = q3_Model$residuals # Get the model residuals
 hist(q3_Model_residuals) # Plot the result
@@ -334,7 +337,8 @@ qqline(q3_Model_residuals)# Plot the Q-Q line
 # look at collinearity
 vif_Values <- vif(q3_Model)
 vif_Values %>% 
-barplot(main = "VIF Values", horiz = TRUE, col = "steelblue") #create horizontal bar chart to display each VIF value
+barplot(main = "VIF Values", horiz = TRUE, col = "steelblue") #create horizontal
+#bar chart to display each VIF value
 ```
 
 The equation for our model can be found in the summary. For this
@@ -368,36 +372,39 @@ ggplot(aes(y=mean_hle,x=pid,colour=finance)) +
 
 ```
 
-### Predicting mental health score in Scottish council areas using the % of the population income deprived and ability to manage finances well
+### Predicting mental wellbeing score in Scottish council areas using the % of the population income deprived and ability to manage finances well
 
-The modelling was repeated to predict mental health score using the % of
-the population income deprived and the ability to manage finances well.
+The modelling was repeated to predict mental wellbeing score using the %
+of the population income deprived and the ability to manage finances
+well.
 
-```{r - repeat to model mental health score, eval=FALSE}
+```{r - repeat to model mental health score}
+
 q3_Model_mental = lm(formula = mental_score ~ pid + finance, data = data_final)
 summary(q3_Model_mental)
 
-# Get the model residuals
-q3_Model_mental_residuals = q3_Model$residuals
+```
 
-# Plot the result
-hist(q3_Model_mental_residuals)
+```{r - checking parameters of the model, eval=FALSE}
 
-# Plot the residuals
-qqnorm(q3_Model_mental_residuals)
-
-# Plot the Q-Q line
-qqline(q3_Model_mental_residuals)
+q3_Model_mental_residuals = q3_Model$residuals # Get the model residuals
+hist(q3_Model_mental_residuals) # Plot the result
+qqnorm(q3_Model_mental_residuals) # Plot the residuals
+qqline(q3_Model_mental_residuals) # Plot the Q-Q line
 
 # look at collinearity
 vif_Values2 <- vif(q3_Model_mental)
 vif_Values2 %>% 
-barplot(main = "VIF Values", horiz = TRUE, col = "steelblue") #create horizontal bar chart to display each VIF value
+barplot(main = "VIF Values", horiz = TRUE, col = "steelblue") #create horizontal
+#bar chart to display each VIF value
 ```
+
+The residuals were normal and no concerns around collinearity were
+identified.
 
 The equation for this model is:
 
-Mental health score = 49.1 -0.23x + 0.03y
+Mental wellbeing score = 49.1 - 0.23x + 0.03y
 
 where x is our population income deprived and y is the ability to manage
 own finance variable.
@@ -411,15 +418,16 @@ mental health seems to be less associated with income deprivation.
 financial management ability*
 
 ```{r - plot the model for mental health score, message=FALSE, warning=FALSE}
+
 data_final %>% 
 ggplot(aes(y=mental_score,x=pid,colour=finance)) +
   geom_point() +
   stat_smooth(method="lm", se=FALSE) +
-  ggtitle("Linear regression model to predict mental health score in 
+  ggtitle("Linear regression model to predict mental wellbeing score in 
   Scottish councils using income deprivation and ability to manage
   money well") +
   labs(x="% of population that are income deprived (pid)", 
-       y = "Mental health score (mental_score)",
+       y = "Mental wellbeing score (mental_score)",
        colour = "Ability to manage
   money well (finance)")
 
@@ -439,7 +447,7 @@ considerable inequality in healthy life expectancy of 10 years. The
 Orkney Islands stood out as a council area that did not conform to this
 trend. Although it was difficult to visualise a similar trend for mental
 wellbeing score, some council areas with similar levels of deprivation,
-for example Angus and East Lothian has disparate mental wellbeing of
+for example Angus and East Lothian, had disparate mental wellbeing of
 their populations. Understanding and observing trends in life expectancy
 and mental health alongside deprivation and other contextual factors may
 support policies to improve the general health of Scottish council
@@ -453,9 +461,9 @@ negative correlation between the ability of households to manage their
 money well with increasing income deprivation. This shows that despite
 the context of a cost of living crisis, those areas with higher
 proportions of the population being income deprived were still less able
-to manage their money well. Hwever, we did see a few council areas that
-were outliers where areas of least deprivation had higher and lowe
-abilities in managing money well.
+to manage their money well. However, we did see a few council areas that
+were outliers, for example where areas of least deprivation had higher
+and lower abilities in managing money well.
 
 The data was then used to create models for predicting healthy life
 expectancy and mental wellbeing using the percentage of the population
@@ -466,15 +474,15 @@ These models could help to inform policy and targets for improving
 healthy life expectancy in council areas where deprivation and healthy
 life expectancy is low.
 
-There are a number of limitations to this analysis. The datasets
-represent data collection and updates in different years. Therefore, the
-exact ability of the datasets to reflect each variable at one specific
-point in time is not possible and should be consider when interpreting
-this report. Furthermore, the variables used, although, similar in scale
-result from different methods of collection whereby mental wellbeing
-score and abiltiy to manage money well are likert scores converted to a
-continuous scale using percentages. Therefore, given the subjectiveness
-of answering questions on a likert scale caution should be taken when
+Limitations to this analysis included data variables collected and
+updated in different years. Therefore, the exact ability of the datasets
+to reflect each variable at one specific point in time is not possible
+and should be consider when interpreting this report. Furthermore, the
+variables used, although, similar in scale result from different methods
+of computation whereby mental wellbeing score and ability to manage
+money well are likert scores converted to a continuous scale using
+percentages. Therefore, given the subjectiveness of answering questions
+on a likert scale and differing scales, caution should be taken when
 interpreting these variables. Finally, we did not perform statistical
 testing to confirm correlations performed or predictor variables in the
 models created.
